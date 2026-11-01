@@ -1,4 +1,5 @@
-export default function PageHeader({ title, subtitle, actions, eyebrow }) {
+export default function PageHeader({ title, subtitle, actions, action, eyebrow }) {
+  const acts = actions || action;
   return (
     <header className="page-header">
       <div>
@@ -6,7 +7,7 @@ export default function PageHeader({ title, subtitle, actions, eyebrow }) {
         <h1>{title}</h1>
         {subtitle && <p className="muted">{subtitle}</p>}
       </div>
-      {actions && <div className="page-actions">{actions}</div>}
+      {acts && <div className="page-actions">{acts}</div>}
     </header>
   );
 }
